@@ -1,0 +1,6 @@
+requests>=2.31.0
+colorama>=0.4.6      # optional: coloured terminal output (graceful fallback if absent)
+
+# ── Dev / testing (not required for running the bot) ──────────────────────
+pytest>=7.4.0
+pytest-mock>=3.11.0

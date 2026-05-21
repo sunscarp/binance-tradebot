@@ -1,0 +1,70 @@
+2026-05-19 01:35:41  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None
+2026-05-19 01:35:41  DEBUG     bot.client: → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1747600541123}
+2026-05-19 01:35:41  DEBUG     bot.client: ← HTTP 200  body={"orderId":4185623,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_abc123","price":"0","avgPrice":"104321.50","origQty":"0.001","executedQty":"0.001","cumQty":"0.001","cumQuote":"104.32150","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1747600541387}
+2026-05-19 01:35:41  INFO      bot.client: place_order ← orderId=4185623 status=FILLED executedQty=0.001 avgPrice=104321.50
+2026-05-19 01:35:41  INFO      __main__: Order success: orderId=4185623 status=FILLED executedQty=0.001 avgPrice=104321.50
+
+2026-05-19 01:38:15  INFO      __main__: Placing order: symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=108000.0
+2026-05-19 01:38:15  DEBUG     bot.client: → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 108000.0, 'timeInForce': 'GTC', 'timestamp': 1747600695441}
+2026-05-19 01:38:15  DEBUG     bot.client: ← HTTP 200  body={"orderId":4185701,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_def456","price":"108000.00","avgPrice":"0.00","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1747600695710}
+2026-05-19 01:38:15  INFO      bot.client: place_order ← orderId=4185701 status=NEW executedQty=0 avgPrice=0.00
+2026-05-19 01:38:15  INFO      __main__: Order success: orderId=4185701 status=NEW executedQty=0 avgPrice=0.00
+
+2026-05-19 01:41:03  INFO      __main__: Placing order: symbol=BTCUSDT side=SELL type=STOP_MARKET qty=0.001 price=98000.0
+2026-05-19 01:41:03  DEBUG     bot.client: → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': 0.001, 'stopPrice': 98000.0, 'timestamp': 1747600863220}
+2026-05-19 01:41:03  DEBUG     bot.client: ← HTTP 200  body={"orderId":4185802,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_ghi789","price":"0","avgPrice":"0.00","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"98000.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1747600863499}
+2026-05-19 01:41:03  INFO      bot.client: place_order ← orderId=4185802 status=NEW executedQty=0 avgPrice=0.00
+2026-05-19 01:41:03  INFO      __main__: Order success: orderId=4185802 status=NEW executedQty=0 avgPrice=0.00
+
+2026-05-19 01:44:22  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=LIMIT qty=0.001 price=-50
+2026-05-19 01:44:22  ERROR     __main__: Validation error: price must be > 0, got -50.0
+2026-05-19 01:44:50  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=LIMIT qty=0.001 price=None
+2026-05-19 01:44:50  ERROR     __main__: Validation error: price is required for LIMIT orders
+2026-05-19 02:26:14  INFO      __main__: Placing order: symbol=BTCUSDT side=SELL type=STOP_MARKET qty=0.001 price=98000.0
+2026-05-19 02:26:14  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'STOP_MARKET', 'quantity': 0.001, 'price': 98000.0}
+2026-05-19 02:26:14  INFO      bot.client: place_order → symbol=BTCUSDT side=SELL type=STOP_MARKET qty=0.001 price=98000.0 stopPrice=98000.0
+2026-05-19 02:26:14  ERROR     bot.client: API error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-05-19 02:26:14  ERROR     __main__: BinanceAPIError code=-4120 msg=Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-05-19 02:35:49  INFO      __main__: Placing order: symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=108000.0
+2026-05-19 02:35:49  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': 0.001, 'price': 108000.0}
+2026-05-19 02:35:49  INFO      bot.client: place_order → symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=108000.0 stopPrice=None
+2026-05-19 02:35:49  INFO      bot.client: place_order ← orderId=13158093527 status=NEW executedQty=0.0000 avgPrice=0.00
+2026-05-19 02:35:49  INFO      __main__: Order success: orderId=13158093527 status=NEW executedQty=0.0000 avgPrice=0.00
+2026-05-19 02:42:23  INFO      __main__: Placing order: symbol=BTCUSDT side=SELL type=STOP_MARKET qty=10.0 price=100.0
+2026-05-19 02:42:23  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'STOP_MARKET', 'quantity': 10.0, 'price': 100.0}
+2026-05-19 02:42:23  INFO      bot.client: place_order → symbol=BTCUSDT side=SELL type=STOP_MARKET qty=10.0 price=100.0 stopPrice=100.0
+2026-05-19 02:42:24  ERROR     bot.client: API error -4120: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-05-19 02:42:24  ERROR     __main__: BinanceAPIError code=-4120 msg=Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-05-19 02:50:04  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=100.0 price=100.0
+2026-05-19 02:50:04  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_MARKET', 'quantity': 100.0, 'price': 100.0}
+2026-05-19 02:50:04  INFO      bot.client: place_algo_order → symbol=BTCUSDT side=BUY algoType=STOP_MARKET qty=100.0 stopPrice=100.0
+2026-05-19 02:50:05  ERROR     bot.client: API error -4500: Invalid algoType.
+2026-05-19 02:50:05  ERROR     __main__: BinanceAPIError code=-4500 msg=Invalid algoType.
+2026-05-19 02:51:59  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=100.0 price=1000.0
+2026-05-19 02:51:59  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_MARKET', 'quantity': 100.0, 'price': 1000.0}
+2026-05-19 02:51:59  INFO      bot.client: place_algo_order → symbol=BTCUSDT side=BUY algoType=CONDITIONAL type=STOP_MARKET qty=100.0 stopPrice=1000.0
+2026-05-19 02:52:00  ERROR     bot.client: API error -1102: Mandatory parameter 'triggerprice' was not sent, was empty/null, or malformed.
+2026-05-19 02:52:00  ERROR     __main__: BinanceAPIError code=-1102 msg=Mandatory parameter 'triggerprice' was not sent, was empty/null, or malformed.
+2026-05-19 02:52:46  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=100.0 price=1000.0
+2026-05-19 02:52:46  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_MARKET', 'quantity': 100.0, 'price': 1000.0}
+2026-05-19 02:52:46  INFO      bot.client: place_algo_order → symbol=BTCUSDT side=BUY algoType=CONDITIONAL type=STOP_MARKET qty=100.0 triggerPrice=1000.0
+2026-05-19 02:52:46  ERROR     bot.client: API error -2021: Order would immediately trigger.
+2026-05-19 02:52:46  ERROR     __main__: BinanceAPIError code=-2021 msg=Order would immediately trigger.
+2026-05-19 02:53:59  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=100.0 price=10000000.0
+2026-05-19 02:53:59  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_MARKET', 'quantity': 100.0, 'price': 10000000.0}
+2026-05-19 02:53:59  INFO      bot.client: place_algo_order → symbol=BTCUSDT side=BUY algoType=CONDITIONAL type=STOP_MARKET qty=100.0 triggerPrice=10000000.0
+2026-05-19 02:53:59  ERROR     bot.client: API error -4007: Stop price greater than max price.
+2026-05-19 02:53:59  ERROR     __main__: BinanceAPIError code=-4007 msg=Stop price greater than max price.
+2026-05-19 02:54:20  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=STOP_MARKET qty=100.0 price=100000.0
+2026-05-19 02:54:20  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_MARKET', 'quantity': 100.0, 'price': 100000.0}
+2026-05-19 02:54:20  INFO      bot.client: place_algo_order → symbol=BTCUSDT side=BUY algoType=CONDITIONAL type=STOP_MARKET qty=100.0 triggerPrice=100000.0
+2026-05-19 02:54:21  INFO      bot.client: place_algo_order ← algoId=1000000079165808 status=None
+2026-05-19 02:54:21  INFO      __main__: Order success: orderId=None status=None executedQty=None avgPrice=None
+2026-05-19 03:02:04  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=TWAP qty=1.0 price=None
+2026-05-19 03:02:04  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 1.0, 'price': None, 'duration': 3600, 'num_sub_orders': 12, 'client_algo_id': None}
+2026-05-19 03:02:04  INFO      bot.client: place_twap_order → symbol=BTCUSDT side=BUY qty=1.0 duration=3600 subOrders=12
+2026-05-19 03:02:05  ERROR     __main__: BinanceAPIError code=-1 msg=Non-JSON response: 
+2026-05-19 03:03:51  INFO      __main__: Placing order: symbol=BTCUSDT side=BUY type=TWAP qty=1.0 price=None
+2026-05-19 03:03:51  INFO      bot.orders: Order validated: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 1.0, 'price': None, 'duration': 3600, 'client_algo_id': None, 'position_side': 'LONG', 'limit_price': 100000.0}
+2026-05-19 03:03:51  INFO      bot.client: place_twap_order → symbol=BTCUSDT side=BUY qty=1.0 duration=3600 positionSide=LONG limitPrice=100000.0
+2026-05-19 03:03:51  ERROR     __main__: BinanceAPIError code=-1 msg=Non-JSON response: 
